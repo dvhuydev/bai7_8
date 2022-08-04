@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="my-5">
+            <div class="form-group">
+                <h2>Nhập vào 1 mảng bất kỳ, các phần tử cách nhau bởi dấu cách</h2>
+                <input type="text" id="rawArray" class="form-control" />
+                <button class="btn w-25 my-3 d-block ml-auto mr-auto btn-success" onclick="btnInsertArr()"
+                    id="btnInsertArr">Tạo mảng</button>
+                <div class="alert alert-success">
+                    <p>Mảng được tạo: </p>
+                    <span id="array"></span>
+                </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link mb-2 active" id="v-pills-Bai1-tab" data-toggle="pill" data-target="#v-pills-Bai1"
+                        type="button" role="tab" aria-controls="v-pills-Bai1" aria-selected="true">Bài 1</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai2-tab" data-toggle="pill" data-target="#v-pills-bai2"
+                        type="button" role="tab" aria-controls="v-pills-bai2" aria-selected="false">Bài 2</button>
+
+                    <button class="nav-link mb-2" id="v-pills-Bai3-tab" data-toggle="pill" data-target="#v-pills-Bai3"
+                        type="button" role="tab" aria-controls="v-pills-Bai3" aria-selected="false">Bài 3</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai4-tab" data-toggle="pill" data-target="#v-pills-bai4"
+                        type="button" role="tab" aria-controls="v-pills-bai4" aria-selected="false">Bài 4</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai5-tab" data-toggle="pill" data-target="#v-pills-bai5"
+                        type="button" role="tab" aria-controls="v-pills-bai5" aria-selected="false">Bài 5</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai6-tab" data-toggle="pill" data-target="#v-pills-bai6"
+                        type="button" role="tab" aria-controls="v-pills-bai6" aria-selected="false">Bài 6</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai7-tab" data-toggle="pill" data-target="#v-pills-bai7"
+                        type="button" role="tab" aria-controls="v-pills-bai7" aria-selected="false">Bài 7</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai8-tab" data-toggle="pill" data-target="#v-pills-bai8"
+                        type="button" role="tab" aria-controls="v-pills-bai8" aria-selected="false">Bài 8</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai9-tab" data-toggle="pill" data-target="#v-pills-bai9"
+                        type="button" role="tab" aria-controls="v-pills-bai9" aria-selected="false">Bài 9</button>
+
+                    <button class="nav-link mb-2" id="v-pills-bai10-tab" data-toggle="pill" data-target="#v-pills-bai10"
+                        type="button" role="tab" aria-controls="v-pills-bai10" aria-selected="false">Bài 10</button>
+                </div>
+            </div>
+            
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-Bai1" role="tabpanel"
+                        aria-labelledby="v-pills-Bai1-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger"> Bài 1: Tổng số dương</h3>
+                            <button class="btn btn-success mt-3 right" id="btnTinhTong">Tính tổng</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result1"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai2" role="tabpanel" aria-labelledby="v-pills-bai2-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 2: Đếm số dương</h3>
+                            <button class="btn btn-success mt-3 right" id="btnDemSo">Đếm số</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result2"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-Bai3" role="tabpanel" aria-labelledby="v-pills-Bai3-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 3: Tìm số nhỏ nhất</h3>
+                            <button class="btn btn-success mt-3 right" id="btnTimMin">Tìm min</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result3"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai4" role="tabpanel" aria-labelledby="v-pills-bai4-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 4: Tìm số dương nhỏ nhất</h3>
+                            <button class="btn btn-success mt-3 right" id="btnTimSoDuongNhoNhat">Tìm số dương nhỏ
+                                nhất</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result4"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bai5" role="tabpanel" aria-labelledby="v-pills-bai5-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 5: Tìm số chẵn cuối cùng</h3>
+                            <button class="btn btn-success mt-3 right" id="btnTimSoChan">Tìm số chẵn</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result5"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai6" role="tabpanel" aria-labelledby="v-pills-bai6-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 6: Đổi chỗ (Mảng bắt đầu từ vị trí 0)</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="index1" placeholder="Nhập vị trí 1">
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="index2" placeholder="Nhập vị trí 2">
+                                </div>
+                            </div>
+                            <div class="row justify-content-end pr-3">
+                                <button class="btn btn-success mt-3 right" id="btnDoiCho">Đổi chỗ</button>
+                                <button style="display: none;" class="btn btn-success mt-3 right" id="btnReset">Đổi chỗ</button>
+                            </div>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result6"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai7" role="tabpanel" aria-labelledby="v-pills-bai7-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 7: Sắp xếp tăng dần</h3>
+                            <button class="btn btn-success mt-3 right" id="btnSapXep">Sắp xếp</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result7">Mảng sau khi sắp xếp: </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai8" role="tabpanel" aria-labelledby="v-pills-bai8-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 8: Tìm số nguyên tố đầu tiên</h3>
+                            <button class="btn btn-success mt-3 right" id="btnSoNguyenToDauTien">Tìm số nguyên tố</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result8"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai9" role="tabpanel" aria-labelledby="v-pills-bai9-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 9: Đếm số nguyên</h3>
+                            <input type="number" class="form-control" id="num1" placeholder="Nhập số">
+                            <button class="btn btn-success mt-3 right" id="btnThem1">Thêm số</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result9"></p>
+                            </div>
+                            <button class="btn btn-success mt-3 right" id="btnDemSoNguyen">Đếm số nguyên</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result10"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="v-pills-bai10" role="tabpanel" aria-labelledby="v-pills-bai10-tab">
+                        <div class="form-group text-right">
+                            <h3 class="text-left alert alert-danger">Bài 10: So sánh số lượng số âm và dương</h3>
+                            <button class="btn btn-success mt-3 right" id="btnSoSanh">So sánh</button>
+                            <div class="alert alert-success mt-3 text-left">
+                                <p id="result11"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
