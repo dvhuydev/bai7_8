@@ -36,8 +36,8 @@ function strToNumArr(str) {
 
 // Bài 1
 function tinhTongSoDuong() {
-    var sum = 0;
-    for (var i = 0; i <= arr.length; i++) {
+    let sum = 0;
+    for (let i = 0; i <= arr.length; i++) {
         if (arr[i] > 0) {
             sum += arr[i];
         }
@@ -49,8 +49,8 @@ document.getElementById("btnTinhTong").onclick = tinhTongSoDuong;
 
 // Bài 2
 function demSoDuong() {
-    var count = 0;
-    for (var i = 0; i <= arr.length; i++) {
+    let count = 0;
+    for (let i = 0; i <= arr.length; i++) {
         if (arr[i] >= 0) {
             count++;
         }
@@ -63,8 +63,8 @@ document.getElementById("btnDemSo").onclick = demSoDuong;
 // Bài 3
 function timMin() {
     // giả xử số đầu tiên = min 
-    var min = arr[0];
-    for (var i = 1; i < arr.length; i++) {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
         if (arr[i] < min) {
             min = arr[i];
         }
@@ -76,16 +76,16 @@ document.querySelector("#btnTimMin").onclick = timMin;
 
 // Bài 4
 function timSoDuongNhoNhat() {
-    var arr2 = [];
-    for (var i = 0; i < arr.length; i++) {
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] >= 0) {
             arr2.push(arr[i]);
         } else {
             min = 'Mảng không có phần tử dương!';
         }
     }
-    var min = arr2[0];
-    for (var j = 0; j < arr2.length; j++) {
+    let min = arr2[0];
+    for (let j = 0; j < arr2.length; j++) {
         if (arr2[j] < min) {
             min = arr2[j];
         }
@@ -97,17 +97,17 @@ document.querySelector('#btnTimSoDuongNhoNhat').onclick = timSoDuongNhoNhat;
 
 // Bài 5
 function timSoChanCuoiCung() {
-    var arr2 = [];
-    for (var i = 0; i < arr.length; i++) {
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
         arr2.push(arr[i])
     }
-    var soChanCuoi = "";
-    for (var i = arr2.length - 1; i >= 0; i--) {
+    let soChanCuoi;
+    for (let i = arr2.length - 1; i >= 0; i--) {
         if (arr2[i] % 2 == 0) {
             soChanCuoi = arr2[i];
             break;
         } else {
-            soChanCuoi = "Mảng không có số chẵn!"
+            soChanCuoi = -1
         }
     }
     document.querySelector('#result5').innerHTML = soChanCuoi;
@@ -116,8 +116,8 @@ document.querySelector('#btnTimSoChan').onclick = timSoChanCuoiCung;
 
 // Bài 6
 
-var hoanDoi = document.querySelector('#btnDoiCho');
-var bReset = document.querySelector('#btnReset');
+let hoanDoi = document.querySelector('#btnDoiCho');
+let bReset = document.querySelector('#btnReset');
 hoanDoi.addEventListener('click',function (){
     doiCho();
     hoanDoi.style.display = "none";
@@ -130,14 +130,14 @@ bReset.addEventListener('click', function(){
 });
 
 function doiCho() {
-    var arr2 = [];
-    for (var i = 0; i < arr.length; i++) {
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
         arr2.push(arr[i])
     }
-    for (var i = 0; i < arr2.length-1; i++) {
-        var viTri1 = Number(document.querySelector('#index1').value);
-        var viTri2 = Number(document.querySelector('#index2').value);
-        var temp = arr2[viTri1]
+    for (let i = 0; i < arr2.length-1; i++) {
+        let viTri1 = Number(document.querySelector('#index1').value);
+        let viTri2 = Number(document.querySelector('#index2').value);
+        let temp = arr2[viTri1]
         arr2[viTri1] = arr2[viTri2];
         arr2[viTri2] = temp;
     }
@@ -145,8 +145,8 @@ function doiCho() {
 }
 
 function reset(){
-    var arr2 = [];
-    for (var i = 0; i < arr.length; i++) {
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
         arr2.push(arr[i])
     }
     document.querySelector('#result6').innerHTML =  'Mảng sau khi đổi: ' + arr2;
@@ -154,14 +154,14 @@ function reset(){
 
 // Bài 7
 function sapXepTangDan(){
-    var arr2 = []
-    for(var i = 0 ; i < arr.length; i++){
+    let arr2 = []
+    for(let i = 0 ; i < arr.length; i++){
         arr2.push(arr[i])
     }
-    for(var i = 0 ; i < arr2.length -1 ; i ++){
-        for(var j = 0 ; j < arr2.length; j++){
+    for(let i = 0 ; i < arr2.length -1 ; i ++){
+        for(let j = 0 ; j < arr2.length; j++){
             if(arr2[j] > arr2[j+1]){
-                var temp = arr2[j];
+                let temp = arr2[j];
                 arr2[j] = arr2[j+1];
                 arr2[j+1] = temp;
             }
@@ -172,25 +172,26 @@ function sapXepTangDan(){
 document.querySelector('#btnSapXep').onclick = sapXepTangDan;
 
 // Bài 8
+let soNTTien;
 function checkSNT(number) {
     if (number <= 1){
-       return 0
+        return 0
     }
-    for(var j = 2 ; j <= Math.sqrt(number) ; j++){
+    for(let j = 2 ; j <= Math.sqrt(number) ; j++){
         if(number % j == 0){
             return 0
         }
     }
-    return 1;
+    return soNTTien;
 }
 function timSoNguyenToDauTien() {
-    var soNTTien = 0;
-    for(var i = 0 ; i <= arr.length;i++){
+    for(let i = 0 ; i <= arr.length;i++){
         
         if(checkSNT(arr[i])){
             soNTTien = arr[i];
             break;
-        }else{
+        }
+        else{
             soNTTien = -1;
         }
     }
@@ -200,7 +201,7 @@ document.querySelector('#btnSoNguyenToDauTien').onclick = timSoNguyenToDauTien;
 
 // Bài 9
 function themSo1() {
-    var n = Number(document.querySelector("#num1").value);
+    let n = Number(document.querySelector("#num1").value);
     arr.push(n);
     document.getElementById("result9").innerHTML = arr;
 }
@@ -208,8 +209,8 @@ document.getElementById("btnThem1").onclick = themSo1;
 
 function demSoNguyen() {
     
-    var countSoNguyen = 0;
-    for(var i = 0; i < arr.length ; i++){
+    let countSoNguyen = 0;
+    for(let i = 0; i < arr.length ; i++){
         if(Number.isInteger(arr[i])){
             countSoNguyen++;
         }
@@ -220,10 +221,10 @@ document.querySelector('#btnDemSoNguyen').onclick = demSoNguyen;
 
 // Bài 10
 function soSanhAmVaDuong() {
-    var countDuong = 0;
-    var countAm = 0
-    var content = '';
-    for (var i = 0; i <= arr.length; i++) {
+    let countDuong = 0;
+    let countAm = 0
+    let content = '';
+    for (let i = 0; i <= arr.length; i++) {
         if (arr[i] >= 0) {
             countDuong++;
         }else if( arr[i] < 0){
